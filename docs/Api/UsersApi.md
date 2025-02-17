@@ -1,26 +1,34 @@
 # Voipex\Ipbx\UsersApi
 
-All URIs are relative to *http://ipbxapi.voipex.io*
+All URIs are relative to http://ipbxapi.voipex.io, except if the operation defines another base path.
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**putUsersProfile**](UsersApi.md#putusersprofile) | **PUT** /users/profile | Set profile to user
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**putUsersProfile()**](UsersApi.md#putUsersProfile) | **PUT** /users/profile | Set profile to user |
 
-# **putUsersProfile**
-> \Voipex\Ipbx\Model\Model49 putUsersProfile($body)
+
+## `putUsersProfile()`
+
+```php
+putUsersProfile($model48): \Voipex\Ipbx\Model\Model49
+```
 
 Set profile to user
 
 Set profile to user
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+
 // Configure API key authorization: soap
 $config = Voipex\Ipbx\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // $config = Voipex\Ipbx\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+
 
 $apiInstance = new Voipex\Ipbx\Api\UsersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -28,22 +36,21 @@ $apiInstance = new Voipex\Ipbx\Api\UsersApi(
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Voipex\Ipbx\Model\Model48(); // \Voipex\Ipbx\Model\Model48 | 
+$model48 = new \Voipex\Ipbx\Model\Model48(); // \Voipex\Ipbx\Model\Model48
 
 try {
-    $result = $apiInstance->putUsersProfile($body);
+    $result = $apiInstance->putUsersProfile($model48);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UsersApi->putUsersProfile: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**\Voipex\Ipbx\Model\Model48**](../Model/Model48.md)|  | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **model48** | [**\Voipex\Ipbx\Model\Model48**](../Model/Model48.md)|  | [optional] |
 
 ### Return type
 
@@ -55,8 +62,9 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
